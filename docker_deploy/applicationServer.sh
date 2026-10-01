@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "Installing dependencies"
-dnf install -y git
+apt install -y git
 
 echo "Installing Docker"
 dnf config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
