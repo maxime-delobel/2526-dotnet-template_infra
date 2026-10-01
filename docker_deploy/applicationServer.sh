@@ -13,7 +13,7 @@ fi
 cd /home/vagrant/2526-dotnet-template
 
 echo "Building Docker image"
-docker build -t rise-server -f /home/vagrant/docker_deploy/Dockerfile .
+docker build -t rise-server -f /home/vagrant/2526-dotnet-template/docker_deploy/Dockerfile .
 
 echo "Starting Docker container"
 docker run -d \
