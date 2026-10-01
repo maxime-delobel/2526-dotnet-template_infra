@@ -30,12 +30,16 @@ try
         {
             var connectionString = builder.Configuration.GetConnectionString("DatabaseConnection") ??
                                    throw new InvalidOperationException("Connection string 'DatabaseConnection' not found.");
-            o.UseSqlite(connectionString); // Swap Sqlite for your database provider (e.g. Sql Server, MySQL, PostgreSQL, etc.).
-            o.EnableDetailedErrors();
-            if (builder.Environment.IsDevelopment())
-            {
-                o.EnableSensitiveDataLogging(); // only enabled in development.
+            var serverVersion = new MySqlServerVersion(new Version(8, 0, 29));
+            if (builder.Environment.IsDevelopment()){
+                o.UseMySql(connectionString, serverVersion);
+                o.LogTo(Console.WriteLine, LogLevel.Information);
+                o.EnableSensitiveDataLogging();
+                o.EnableDetailedErrors();
             }
+            else{
+                o.UseMySql(connectionString, serverVersion);
+            };
             o.UseTriggers(options => options.AddTrigger<EntityBeforeSaveTrigger>()); // Handles all UpdatedAt, CreatedAt stuff.
         })
         .ConfigureApplicationCookie(o =>
