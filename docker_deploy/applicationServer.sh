@@ -1,11 +1,11 @@
 #!/bin/bash
-
+set -euo pipefail
 echo "Installing dependencies"
-apt install -y git
+apt-get install -y git
 
 echo "Installing Docker"
-dnf config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
-dnf install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+apt-get config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
 systemctl enable --now docker
 
