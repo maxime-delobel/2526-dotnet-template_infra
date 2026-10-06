@@ -7,7 +7,7 @@ apt-get install -y git
 echo "Cloning the repo"
 
 echo "Building Docker image"
-docker build -t rise-server -f ./deploy_docker/Dockerfile .
+docker build -t rise-server -f ./docker_deploy/Dockerfile .
 
 echo "Starting Docker container"
 docker run -d \
