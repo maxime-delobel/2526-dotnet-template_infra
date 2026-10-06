@@ -11,8 +11,9 @@ docker build -t rise-server -f ./docker_deploy/Dockerfile .
 
 echo "Running database migrations"
 docker run --rm \
+    --entrypoint dotnet \
     rise-server \
-    dotnet ef database update \
+    ef database update \
     --startup-project /app/src/Rise.Server \
     --project /app/src/Rise.Persistence
 
