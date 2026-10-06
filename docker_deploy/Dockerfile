@@ -4,6 +4,9 @@ WORKDIR /app
 
 COPY . .
 
+RUN dotnet tool install --global dotnet-ef
+ENV PATH="$PATH:/root/.dotnet/tools"
+
 EXPOSE 5001
 
 ENTRYPOINT ["dotnet", "run", "--project", "/app/src/Rise.Server", "--urls", "http://0.0.0.0:5001"]
