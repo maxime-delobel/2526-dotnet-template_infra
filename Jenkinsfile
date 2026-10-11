@@ -1,4 +1,5 @@
 node {
+    checkout scm
     stage('Preparation') {
         catchError(buildResult: 'SUCCESS') {
             sh 'docker stop rise-server'
