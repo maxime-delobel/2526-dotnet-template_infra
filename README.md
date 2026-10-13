@@ -5,7 +5,7 @@ sdsdsd
 - [MEMBER1_NAME] - [MEMBER1_EMAIL] - [MEMBER1_GITHUB_USERNAME]
 
 ## Technologies & Packages Used
-
+hddsj
 - [Blazor](https://dotnet.microsoft.com/en-us/apps/aspnet/web-apps/blazor) - Frontend.
 - [ASP.NET 9](https://dotnet.microsoft.com/en-us/apps/aspnet) - Backend.
 - [Entity Framework 9](https://learn.microsoft.com/en-us/ef/) - Database Access with Unit Of Work and Repository patterns.
