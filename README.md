@@ -1,7 +1,7 @@
 # Rise - [GROUPNAME]
 
 ## Team Members
-
+sdsdsd
 - [MEMBER1_NAME] - [MEMBER1_EMAIL] - [MEMBER1_GITHUB_USERNAME]
 
 ## Technologies & Packages Used
