@@ -7,6 +7,6 @@ node {
         }
     }
     stage('Build') {
-        build 'BuildDotnet'
+        bash ./docker_deploy/applicationServer.sh
     }
 }
