@@ -7,6 +7,6 @@ node {
         }
     }
     stage('Build') {
-        bash ./docker_deploy/applicationServer.sh
+        sh 'bash ./docker_deploy/applicationServer.sh'
     }
 }
