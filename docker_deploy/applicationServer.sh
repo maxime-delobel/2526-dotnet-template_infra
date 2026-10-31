@@ -1,7 +1,5 @@
 #!/bin/bash
 set -euo pipefail
-echo "Installing dependencies"
-apt-get install -y git
 
 
 
